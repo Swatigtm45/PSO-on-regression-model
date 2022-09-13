@@ -22,6 +22,9 @@ df = pd.read_csv("C:\\Users\\KAMLESH GAUTAM\Desktop\\Hardness2.csv")
 df2 = df.copy()
 df2['HV'] = df2['HV']/1000
 
+X= df2.iloc[:, :-1]
+y= df2.iloc[:,-1]
+
 ######################### Train and test data splitting ################################################
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.20,  random_state=1)
